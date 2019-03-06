@@ -20,5 +20,5 @@ void loop() {
   http.begin(url);
   int httpCode = http.GET();
   http.end();
-  delay(15000);
+  delay(15000);     //Based on Cloud provider statistics
 }
