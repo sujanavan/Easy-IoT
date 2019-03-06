@@ -1,15 +1,10 @@
-// ACTUATOR only code for IDIOT: FREE & SIMPLE SaaS for IoT
-
 #include <ESP8266WiFi.h>
 #include <ESP8266HTTPClient.h>
 
 const char* ssid = "YOUR WIFI NAME";  // YOUR WIFI NAME
 const char* password = "YOUR WIFI PASSWORD";  // YOUR WIFI PASSWORD
 
-String email="YOUR EMAIL ID"; // YOUR EMAIL ID
-String pass="YOUR ACCOUNT PASSWORD";  // YOUR ACCOUNT PASSSWORD
-
-int status=0;
+int data=0;
 
 void setup () {
   pinMode(LED_BUILTIN,OUTPUT);
@@ -22,16 +17,16 @@ void setup () {
 }
  
 void loop() {
-  String url="http://heart.atspace.tv/device_status.php?email="+email+"&pass="+pass;  
+  String url="URL/data";  
   HTTPClient http;
   http.begin(url);
   int httpCode = http.GET();
   if (httpCode > 0) {
-    status = http.getString().toInt();
-    Serial.println(" Read = " + String(status));
-    if(status==1)                               // ACTUATOR STATUS = 1
+    data = http.getString().toInt();
+    Serial.println(" Read = " + String(data));
+    if(data==1)                               // ACTUATOR STATUS = 1
     digitalWrite(LED_BUILTIN, LOW);             // For ESP LOW MEANS ON - ACTUATOR ACTION
-    if(status==0)                               // ACTUATOR STATUS = 0
+    if(data==0)                               // ACTUATOR STATUS = 0
     digitalWrite(LED_BUILTIN, HIGH);            // For ESP HIGH MEANS OFF - ACTUATOR ACTION
     }
   http.end();
