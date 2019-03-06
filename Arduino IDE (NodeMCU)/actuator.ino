@@ -24,10 +24,10 @@ void loop() {
   if (httpCode > 0) {
     data = http.getString().toInt();
     Serial.println(" Read = " + String(data));
-    if(data==1)                               // ACTUATOR STATUS = 1
-    digitalWrite(LED_BUILTIN, LOW);             // For ESP LOW MEANS ON - ACTUATOR ACTION
-    if(data==0)                               // ACTUATOR STATUS = 0
-    digitalWrite(LED_BUILTIN, HIGH);            // For ESP HIGH MEANS OFF - ACTUATOR ACTION
+    if(data==0)
+    digitalWrite(LED_BUILTIN, LOW); 
+    if(data==1)
+    digitalWrite(LED_BUILTIN, HIGH);
     }
   http.end();
   delay(5000);
