@@ -30,5 +30,5 @@ void loop() {
     digitalWrite(LED_BUILTIN, HIGH);
     }
   http.end();
-  delay(5000);
+  delay(15000);         //Based on Cloud provider statistics
 }
