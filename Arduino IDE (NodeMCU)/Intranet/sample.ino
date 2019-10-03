@@ -21,10 +21,10 @@ void setup(void){
    
   delay(1000);
   Serial.begin(115200);
-  WiFi.softAP(ssid, password); //begin WiFi access point instead of WiFi.begin
+  WiFi.softAP(ssid, password); // instead of WiFi.begin when dependent on another WiFi router
   Serial.println("");
  
-  /* Wait for connection when using WiFi.begin
+  /* Wait for connection when using WiFi.begin when dependent on another WiFi router
   while (WiFi.status() != WL_CONNECTED) {
     delay(500);
     Serial.print(".");
