@@ -31,13 +31,14 @@ void setup(void){
   }
   */
   
+  //If connection successful show IP address in serial monitor
   Serial.println("");
   Serial.print("Connected to ");
   Serial.println(ssid);
   Serial.print("IP address: ");
-  Serial.println(WiFi.softAPIP()); 
+  Serial.println(WiFi.softAPIP()); //WiFi.localIP() IP address assigned to your ESP by other WiFi router
    
-  server.on("/", [](){
+  server.on("/", [](){ //Which routine to handle at root location. This is display page
     server.send(200, "text/html", page);
   });
   server.on("/LEDOn", [](){
