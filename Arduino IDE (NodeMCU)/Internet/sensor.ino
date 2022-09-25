@@ -10,16 +10,7 @@ String URL="<<<HTTP-URL-ONLY-HTTP>>>/write.php?data=";
 int temp=0;
 
 void setup() {
-
   Serial.begin(115200);
-  // Serial.setDebugOutput(true);
-
-  for (uint8_t t = 4; t > 0; t--) {
-    Serial.printf("[SETUP] WAIT %d...\n", t);
-    Serial.flush();
-    delay(1000);
-  }
-
   WiFi.mode(WIFI_STA);
   WiFiMulti.addAP("<<<WIFI-NAME>>>", "<<<WIFI-PASSWORD>>>");
 }
