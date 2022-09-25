@@ -22,10 +22,6 @@ void setup() {
 
   WiFi.mode(WIFI_STA);
   WiFiMulti.addAP("<<<WIFI-NAME>>>", "<<<WIFI-PASSWORD>>>");
-
-  pinMode(LED_BUILTIN, OUTPUT);
-  digitalWrite(LED_BUILTIN, HIGH); //Initially LED is OFF - Built-in LED works in REVERSE - NOT Gate
-
 }
 
 void loop() {
