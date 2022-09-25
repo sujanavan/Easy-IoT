@@ -25,7 +25,7 @@ void loop() {
     WiFiClient client;
     HTTPClient http;
     Serial.print("[HTTP] begin...\n");
-    if (http.begin(client, "<<<HTTP-URL-ONLY-HTTP>>>")) {  // ADD YOUR HTTP URL ONLY HTTP
+    if (http.begin(client, "<<<HTTP-URL-ONLY-HTTP>>>/data")) {  // ADD YOUR HTTP URL ONLY HTTP
 
       Serial.print("[HTTP] GET...\n");
       // start connection and send HTTP header
