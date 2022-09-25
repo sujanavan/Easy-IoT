@@ -1,5 +1,5 @@
 <?php
-//check if request is empty Loc=Location Temp=temperature Eg.:URL/write.php?Loc=Uppal&Temp=25
+//check if request is empty Loc=Location Temp=Temperature Eg.:URL/write.php?Loc=Uppal&Temp=25
 if(empty($_GET["Loc"]) || empty($_GET["Temp"])) die();
 //set date and time to IST
 date_default_timezone_set('Asia/Kolkata');
