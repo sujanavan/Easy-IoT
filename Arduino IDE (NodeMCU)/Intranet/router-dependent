@@ -23,8 +23,8 @@ Ciclk to turn <a href="ledOff">LED OFF</a><br>
 #define LED LED_BUILTIN  
 
 //SSID and Password of your WiFi router
-const char* ssid = "2G@306";
-const char* password = "27208203";
+const char* ssid = "<<<WIFI-NAME>>>";
+const char* password = "<<<WIFI-PASSWORD>>>";
 
 //Declare a global object variable from the ESP8266WebServer class.
 ESP8266WebServer server(80); //Server on port 80
